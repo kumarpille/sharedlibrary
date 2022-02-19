@@ -15,3 +15,7 @@ def runselenium(path)
   sh "java -jar ${path}/testing.jar"
 
 }  
+def needapprovals(name)
+{
+  input message: 'waiting for approval!', submitter: "${name}"
+}  
